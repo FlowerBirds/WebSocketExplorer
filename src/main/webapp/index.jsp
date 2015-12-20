@@ -74,7 +74,7 @@
 		}
 
 		function onError(event) {
-			document.getElementById('messages').innerHTML = "<b style='color:red;'>Connected faild</b>";
+			reciver.innerHTML = "<b style='color:red;'>Connected faild</b>";
 		}
 
 		function send() {
