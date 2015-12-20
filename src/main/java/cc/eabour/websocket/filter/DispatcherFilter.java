@@ -25,7 +25,7 @@ public class DispatcherFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		// Auto-generated method stub
 		HttpServletRequest request = (HttpServletRequest) arg0;
-		logger.info("Request URI: " + request.getRequestURI());
+		logger.info("Request URL: " + request.getRequestURL());
 		chain.doFilter(arg0, arg1);
 	}
 

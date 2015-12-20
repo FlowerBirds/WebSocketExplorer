@@ -6,7 +6,7 @@
 	<div id="messages"></div>
 	<script type="text/javascript">
 		var webSocket = new WebSocket(
-				'ws://localhost:8080/websocket/chat');
+				'ws://localhost:8080/websocket/chat?query=Picasso');
 
 		webSocket.onerror = function(event) {
 			onError(event)
