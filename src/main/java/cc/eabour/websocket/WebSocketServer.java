@@ -1,5 +1,7 @@
 package cc.eabour.websocket;
 
+import java.io.IOException;
+
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -27,6 +29,11 @@ public class WebSocketServer {
 	@OnMessage
 	public void onMessage(String message){
 		logger.info("Client send message: " + message);
+		try {
+			this.session.getBasicRemote().sendText("Server message form Websocket server");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@OnClose
