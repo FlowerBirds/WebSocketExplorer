@@ -8,10 +8,12 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 
+@WebFilter(urlPatterns={"/*"})
 public class DispatcherFilter implements Filter {
 
 	private Logger logger = Logger.getLogger(DispatcherFilter.class);
